@@ -5,11 +5,13 @@ import org.springframework.stereotype.Repository;
 import ru.kata.spring.boot_security.demo.model.User;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository{
 
+    @PersistenceContext
     private final EntityManager entityManager;
 
     public UserRepositoryImpl(EntityManager entityManager) {

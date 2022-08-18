@@ -23,4 +23,8 @@ public class UserController {
         model.addAttribute("user", user);
         return "user";
     }
+    @GetMapping("/startPage")
+    public String startPage() {
+        return "startPage";
+    }
 }
